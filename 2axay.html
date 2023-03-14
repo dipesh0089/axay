@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .menubar
+        {
+            background: rgb(41, 40, 40);
+            text-align: center;
+            line-height: 30px;
+            height: 90px;
+        }
+        .menubar ul
+        {
+            display: inline-flex;
+            list-style: none;
+        }
+        .menubar ul li
+        {
+            width: 120px;
+            margin: 15px;
+            padding: 15px;
+        }
+        .menubar ul li a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        .menubar ul li a:hover
+        {
+            color: aqua;
+        }
+        .menubar .submenu1
+        {
+            /* display: none; */
+            opacity: 0;
+            
+        } 
+        .menubar ul li:hover .submenu1
+        {
+            /* display: block; */
+            position: absolute;
+            background: black;
+            margin-top: 30px;
+            margin-left: -15px;
+            opacity: 1;
+            
+
+        }
+        .menubar ul li:hover .submenu1 ul
+        {
+            display: block;
+            
+        }
+        .menubar ul li:hover .submenu1 ul li
+        {
+            width: 150px;
+            /* padding: 10px; */
+            border-bottom: 1px solid gray;
+
+        }
+        .menubar ul li:hover .submenu1 ul li:last-child
+        {
+            border-bottom: none;
+            
+        }
+        .fa-light .fa-angle-right
+        {
+            float: right;
+        } 
+        .submenu2
+        {
+            display: none;
+            /* opacity: 0; */
+        }
+        .submenu1-2:hover .submenu2
+        {
+            display: block;
+            position: absolute;
+            margin-top: -50px;
+            margin-left: 150px;
+            background: rgb(41, 40, 40);
+            /* opacity: 1; */
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="menubar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Fetures</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a>
+            <div class="submenu1">
+                <ul>
+                    <li><a href="#">large Image</a></li>
+                    <li><a href="#">Medium Image</a></li>
+                    <li><a href="#">Masonry</a></li>
+                    <li class="submenu1-2"><a href="">Pages</a><i class="fa-light fa-angle-right"></i>
+                        <div class="submenu2">
+                            <ul>
+                                <li><a href="#">Full Width</a></li>
+                                <li><a href="#"> Left Side</a></li>
+                                <li><a href="#">Right Side</a></li>
+                                <li><a href="#">Double Side</a></li>
+                            </ul>
+                        </div>
+                    
+                    
+                    </li>
+                    <li><a href="">Double Slider</a></li>
+                    <li><a href="">Single Post</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="">Contact</a></li>
+
+    </ul>
+    </div>
+</body>
+</html>
